@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "runner": "terminal",
+    "tasks": [
+        {
+            "label": "Build",
+            "command": "javac",
+            "group": "build",
+            "type": "shell",
+            "args": [
+                "-sourcepath", 
+                "src", 
+                "-d",
+                "bin", 
+                "src/com/CompanyName/ProjectName/*.java",
+            ],
+            "presentation": {
+            "panel": "new"
+        },
+            "problemMatcher": {
+                "owner": "external",
+                "fileLocation": ["absolute"],
+                "pattern": [
+                    {
+                        "regexp": "^(.+\\.java):(\\d):(?:\\s+(error)):(?:\\s+(.*))$",
+                        "file": 1,
+                        "location": 2,
+                        "severity": 3,
+                        "message": 4
+                    }
+                ]
+            }
+        },
+
+        {
+            "label": "Run",
+            "command": "java",
+            "group": "test",
+            "type": "shell",
+            "args": [
+                "-classpath",
+                "bin:",
+                "com.CompanyName.ProjectName.MainClass"
+            ],
+            "problemMatcher": {}
+        }
+    ]
+}
