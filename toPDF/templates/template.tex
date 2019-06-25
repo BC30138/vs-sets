@@ -1,0 +1,87 @@
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage[12pt]{extsizes}
+\usepackage{fontspec,xltxtra,xunicode}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{caption}
+\floatplacement{figure}{H}
+
+\usepackage{xcolor}
+\usepackage[left=3cm, top=1.5cm, right=1.3cm, bottom=2cm, nohead, footskip=10mm]{geometry}
+\pagestyle{plain}
+\setmainfont{Times New Roman}
+
+\usepackage{titlesec}
+
+\providecommand{\tightlist}{%
+    \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\definecolor{String}{RGB}{134, 179, 0}
+\definecolor{KeyColor}{RGB}{160,0,102}
+
+\captionsetup[lstlisting]{singlelinecheck=false,margin=3pt,
+	 font=,skip=5pt}
+
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    numbers=left,
+    numberstyle=\footnotesize,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+	texcl=true,
+	linewidth=\textwidth,
+	keywordstyle=\color{KeyColor},
+	identifierstyle=\color{black},
+	numberstyle=\scriptsize,
+	stringstyle=\color{String},
+	commentstyle=\color{gray},
+	frame=tb
+}
+
+\begin{document}
+
+	\thispagestyle{empty}
+	\begin{center}
+		Министерство образования и науки Российской Федерации\\
+		Санкт-Петербургский государственный технический университет\\
+		Институт прикладной математики и механики\\
+		Кафедра <<Телематика>>\\
+		\vspace{5cm}
+		\textbf{\textbf{\MakeUppercase{$type$}}}\\
+        \vspace{0.5cm}
+        \textbf{ПО ТЕМЕ}\\
+        \vspace{0.5cm}
+		\textbf{\textbf{<<$title$>>}}\\
+		\vspace{3cm}
+		по направлению 02.04.01.02 <<Организация и управление суперкомпьютерными системами>>
+	\end{center}
+	\vspace{2cm}
+	\begin{tabular} {l l l}
+	\hspace{9.5cm} & \textbf{Выполнил}: & \\
+	& Студент гр. 13643.1 & $author$\\
+	& Проверил: & $teacher$
+	\end{tabular}
+	\vspace*{\fill}
+	\begin{center}
+		Санкт-Петербург\\
+		$date$
+	\end{center}
+	\newpage
+
+	\renewcommand\contentsname{Оглавление}
+	\tableofcontents
+	\newpage
+
+	$body$
+
+\end{document}
