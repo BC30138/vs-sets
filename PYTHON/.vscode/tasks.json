@@ -5,7 +5,7 @@
     "tasks": [
         {
             "label": "Build",
-            "command": "python3",
+            "command": "${config:python.pythonPath}",
             "group": {
                 "kind": "build",
                 "isDefault": true
